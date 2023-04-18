@@ -19,15 +19,24 @@
 <div id="panorama"></div>
 <script>
 pannellum.viewer('panorama', {
-    "type": "equirectangular",
-    "panorama": "https://live.staticflickr.com/65535/52826059512_04b9eef08e_o.jpg",
+    "autoLoad": true,
     "haov": 168.1,
     "vaov": 46.2,
     "vOffset": -6,
     "minHfov": 5,
-    "hfov": 60,
+    "hfov": 100,
     "yaw": 10,
-    "backgroundColor": [0.15, 0.15, 0.15]
+    "backgroundColor": [0.15, 0.15, 0.15],
+    "type": "multires",
+    "multiRes": {
+        "basePath": "img",
+        "path": "/%l/%s%y_%x",
+        "fallbackPath": "/fallback/%s",
+        "extension": "jpg",
+        "tileResolution": 512,
+        "maxLevel": 7,
+        "cubeResolution": 21480
+    }
 });
 </script>
 
